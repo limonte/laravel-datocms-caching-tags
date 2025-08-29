@@ -9,7 +9,9 @@ return Application::configure(basePath: dirname(__DIR__))
         web: __DIR__.'/../routes/web.php',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
+        $middleware->validateCsrfTokens(except: [
+            'invalidate-datocms-cache',
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //

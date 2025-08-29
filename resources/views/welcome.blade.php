@@ -6,6 +6,6 @@
         <title>{{ config('app.name', 'Laravel') }}</title>
     </head>
     <body>
-        <p>This is a very simple Laravel application without front-end and database.</p>
+        {{ $labels['hello'] }}, {{ $labels['world'] }}
     </body>
 </html>
